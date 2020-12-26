@@ -1,0 +1,42 @@
+﻿<Window x:Class="WpfApplication2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Background>
+        <ImageBrush>
+            <ImageBrush.ImageSource>
+                <BitmapImage UriSource="C:/Users/user/RiderProjects/WpfApplication2/WpfApplication2/Img/dollars.png"/>
+            </ImageBrush.ImageSource>
+        </ImageBrush>
+    </Window.Background>
+    <Grid>
+
+       
+        <Grid.RowDefinitions>
+           <RowDefinition Height="2*"/>
+           <RowDefinition Height="*"/>
+           <RowDefinition Height="*"/>
+           <RowDefinition Height="2*"/>
+       </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox PreviewTextInput="PreviewTextInputHandler" Name="FromText" Grid.Row="2" Grid.Column="1"></TextBox>
+        
+        <TextBox PreviewTextInput="PreviewTextInputHandler" Name="ToText" Grid.Row="2" Grid.Column="3"></TextBox>
+        <ComboBox Grid.Column="1" Grid.Row="1" Name="LeftList" Height="30" VerticalAlignment="Top">
+        </ComboBox>
+        <ComboBox Grid.Column="3" Grid.Row="1" Name="RightList" Height="30" VerticalAlignment="Top">
+        </ComboBox>
+        <Button Grid.Row="2" Grid.Column="2" Height="25" Content="Replace" Click="ButtonBase_OnClick"></Button>
+        <Button Grid.Row="3" Grid.Column="2" Height="25" Content="Calculate" Click="Calculate"></Button>
+    </Grid>
+</Window>
